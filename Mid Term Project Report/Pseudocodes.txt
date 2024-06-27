@@ -1,0 +1,285 @@
+InsertionSort(A)
+    for j = 0 to A.length
+        key = A[j]
+        i = j - 1
+                
+        while i >= 0 and A[i] > key:
+            temp = A[i + 1]
+            A[i + 1] = A[i]
+            i = i - 1 
+            A[i + 1] = temp
+
+MergeSort(A, p, r) 
+        if p < r:
+            q = int((p + r) / 2)
+            MergeSort(A, p, q)
+            MergeSort(A, q + 1, r)
+            Merge(A, p, q, r)
+
+Merge(A, p, q, r)
+        n1 = q - p + 1
+        n2 = r - q
+
+        Let L[0.... n1] and R[0.... n2] be new arrays 
+        
+        for i = 0 to n1
+                L[i] = A[p + i]
+
+        for j = 0 to n2
+                R[i] = A[q + j + 1])
+
+        L[n1] = infinity
+        R[n2] = infinity
+        
+        i = 0
+        j = 0
+        
+        for k = p to r + 1
+                if L[i] < R[j]
+                        A[k] = A[i]
+                        i = i + 1
+                else:
+                        A[k] = A[j]
+                        j = j + 1 
+
+SelectionSort(A):
+        start = 0
+        end = A.length - 1
+        length = (end - start) + 1
+        
+        for i = 0 to length
+                min = i
+                
+                for j = i + 1 to length
+                
+                        if A[j] < A[min]
+                                min = j
+                                
+                switch A[i] with A[min]
+
+BubbleSort(A):
+    start = 0
+    end = A.length - 1
+    
+    for i = start to end
+                
+        for j = start to end
+                
+            if A[j] > A[j + 1]
+                swicth A[j] with A[j + 1]
+
+maxHeapify(A, length, i):
+
+        largest = i
+        l = (2 * i) + 1
+        r = (2 * i) + 2
+
+        if l < length and A[l] > A[i]
+                largest = l
+
+        if r < length and A[r] > A[largest]
+                largest = r
+
+        if largest != i
+                switch A[largest] with A[i]
+                maxHeapify(length, largest, column)
+
+buildMaxHeapify(A, length, column):
+
+        for i= length // 2 down to -1
+                maxHeapify(length, i, column)
+
+HeapSort(A):
+
+        length = A.Length
+        buildMaxHeapify(length, column)
+
+        for i = length - 1 down to 0
+                switch A[i] with A[0]
+                length = length - 1
+                maxHeapify(i, 0, column)
+
+QuickSort(A, p, r)
+        if p < r
+                q = partition(p, r)
+                QuickSort(p, q - 1)
+                QuickSort(q + 1, r)
+
+partition(A, p, r)
+        x = A[r]
+        i = p - 1
+
+        for j = p to r
+                if A[j] <= x:
+                        i = i + 1
+                        switch A[i] with A[j]
+        
+        switch A[i + 1] and A[r]
+
+GenomeSort(A)
+        length = A.Length
+        idx = 0 
+
+        while idx < length
+
+                if idx == 0 or A[idx] >= A[idx - 1]
+                        idx = idx + 1
+
+                else:
+                        switch A[idx] and A[idx - 1])
+                        idx = idx - 1
+
+CocktailSort(A)
+        length = A.Length
+
+        for i = length - 1 down to 0
+
+                for j = 0 to i
+                        if A[j] > A[j + 1]
+                                switch A[j] and A[j + 1]
+
+                for j = i down to 0
+                        if A[j] < A[j - 1]
+                                switch A[j] and A[j - 1]
+
+ShellSort(A)
+
+        gap = A.Length //2
+     
+        while gap > 0
+                j = gap
+                
+                while j < A.Length
+                        i = j - gap 
+                        
+                        while i >= 0
+                                
+                                if A[i + gap] > A[i]
+                                        break
+                                else:
+                                        switch A[i+gap] and A[i]
+                
+                                i = i - gap 
+
+                        j = j + 1
+                        
+                gap = gap // 2
+
+TimSort(A)
+        length = A.Length
+        minRun = 32
+
+        for p = 0 to A.Length
+                r = minimun of (p + minRun - 1, length -1)
+                InsertionSort(p, r)
+
+        size = minRun
+        while size < length
+                for p in range(0, length, 2 * size):
+                        q = minimum of (length - 1, p + size - 1)
+                        r = mininimum of ((p + 2 * size - 1), (length - 1))
+
+                        if q < r:
+                                Merge(p, q, r, column)        
+
+                size = 2 * size
+
+CountingSort(A, B, max, column)
+
+        Let C[] be a list
+        Let Result[] be a list
+
+        for i = 0 to max
+                append 0 in C
+
+        for j = 0 to A.Length
+                C[A[j]] = C[A[j]] + 1
+
+        for i = 1 to max
+                C[i] = C[i] + C[i - 1]
+
+        for j = A.Length down to  0 
+                B[(C[A[j-1]]) - 1] =  A[j - 1]      
+                C[A[j - 1]] = C[A[j - 1]] - 1
+
+        for i = 0 to A.Length
+                A[i] = B[i]
+
+BucketSort(A)
+        Let B[] be a List
+        n = 10
+
+        for i = 0 to (n * 1000)
+                B.append([])
+
+        for i = 0 to n
+                B[int(n * A[i])].append(A[i])
+
+        for i = 0 to n
+                B[i] = BucketInsertionSort(B[i])
+
+        B = np.concatenate(B)
+
+RadixSort(A)
+        d = -1
+
+        for i = 0 to A.Length
+                if d > A[i]
+                        d = A[i]
+
+        B = [0 for i = 0 to A.Length]
+        n = 1
+        while (d // n > 0)
+                A = RadixCountingSort(B, n, column) 
+                n = n * 10
+
+PigeonHoleSort(A)
+        Smallest = 9999999999
+        Largest = -1
+
+        for i = 0 to A.Length
+                if Smallest > A[i]
+                        Smallest = A[i]
+
+        for i = 0 to A.Length
+                if Largest < A[i]
+                        Largest = A[i]
+
+        
+        NumberOfHoles = Largest - Smallest + 1
+        Holes = []
+
+        for i = 0 to NumberOfHoles)
+                Holes.append(0)
+
+        for j = 0 to A.Length
+                Holes[j - Smallest] = Holes[j - Smallest] + 1
+
+        clear array A
+        for x = 0 to NumberOfHoles
+                while (Holes[x] > 0)
+                        Holes[x] = Holes[x] - 1
+                        A.append(x + Smallest)
+
+
+LinearSearch(A, B, search)
+        for i = 0 to A.Length
+                        if A[i] == search
+                                B.append(A[i])
+
+StartLetterSeacrh(A, B, search)
+        for i = 0 to A.Length
+                
+                if attribute[0] == search
+                        B.append(A[i])
+
+MiddleWordsSearch(A, B, search)
+
+        for i = 0 to A.Length
+                
+                attribute = A[i]
+                wordList = attribute.split()
+
+                for j = 0 to wordList.Length
+                        if wordList[j] == search
+                                B.append(A[i])

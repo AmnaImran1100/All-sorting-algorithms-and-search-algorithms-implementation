@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="resource">
+    <file>graphics/Auc_Store.jpg</file>
+    <file>graphics/Auction.jpg</file>
+    <file>graphics/I1.jpg</file>
+    <file>graphics/I2.jpg</file>
+    <file>graphics/I3.jpg</file>
+    <file>graphics/I4.jpg</file>
+    <file>graphics/I5.jpg</file>
+    <file>graphics/P5.jpg</file>
+    <file>graphics/P7.jpg</file>
+    <file>graphics/P8.jpg</file>
+    <file>graphics/P9.jpg</file>
+    <file>graphics/P10.jpg</file>
+    <file>graphics/P11.jpg</file>
+    <file>graphics/P12.jpg</file>
+    <file>graphics/P13.jpg</file>
+    <file>graphics/P14.jpg</file>
+    <file>graphics/P19.png</file>
+    <file>graphics/P20.jpg</file>
+    <file>graphics/P21.jpg</file>
+    <file>graphics/P22.jpg</file>
+    <file>graphics/P23.jpg</file>
+    <file>graphics/P24.jpg</file>
+    <file>graphics/P25.jpg</file>
+    <file>graphics/P26.jpg</file>
+    <file>graphics/P27.jpg</file>
+    <file>graphics/P28.jpg</file>
+    <file>graphics/P29.jpg</file>
+    <file>graphics/P31.jpg</file>
+    <file>graphics/P32.jpg</file>
+    <file>graphics/P33.jpg</file>
+    <file>graphics/P34.jpg</file>
+    <file>graphics/P35.jpg</file>
+    <file>graphics/P36.jpg</file>
+    <file>graphics/P37.jpg</file>
+    <file>graphics/P38.jpg</file>
+    <file>graphics/P39.jpg</file>
+    <file>graphics/P40.jpg</file>
+    <file>graphics/P41.jpg</file>
+  </qresource>
+</RCC>
